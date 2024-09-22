@@ -7,7 +7,7 @@ test: test-notebook test-script test-lib
 	pytest
 
 test-notebook:
-	pytest path_to_your_notebook.ipynb
+	pytest analysis.ipynb
 
 test-script:
 	pytest test_script.py
