@@ -1,22 +1,22 @@
 .PHONY: install test format lint
 
 install:
-    pip install -r requirements.txt
+	pip install -r requirements.txt
 
 test: test-notebook test-script test-lib
-    pytest
+	pytest
 
 test-notebook:
-    pytest path_to_your_notebook.ipynb
+	pytest path_to_your_notebook.ipynb
 
 test-script:
-    pytest test_script.py
+	pytest test_script.py
 
 test-lib:
-    pytest test_lib.py
+	pytest test_lib.py
 
 format:
-    black .
+	black .
 
 lint:
-    ruff .
+	ruff .
