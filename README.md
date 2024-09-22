@@ -43,5 +43,10 @@ This project demonstrates a robust setup for a Python data science project using
 
 
 ## Continuous Integration Status
+[![Install Dependencies](https://github.com/iikikk/Python_DS_Project/actions/workflows/install.yml/badge.svg)](https://github.com/iikikk/Python_DS_Project/actions/workflows/install.yml)
 
+[![Code Formatting](https://github.com/iikikk/Python_DS_Project/actions/workflows/format.yml/badge.svg)](https://github.com/iikikk/Python_DS_Project/actions/workflows/format.yml)
 
+[![Lint Code](https://github.com/iikikk/Python_DS_Project/actions/workflows/lint.yml/badge.svg)](https://github.com/iikikk/Python_DS_Project/actions/workflows/lint.yml)
+
+[![Run Tests](https://github.com/iikikk/Python_DS_Project/actions/workflows/test.yml/badge.svg)](https://github.com/iikikk/Python_DS_Project/actions/workflows/test.yml)
