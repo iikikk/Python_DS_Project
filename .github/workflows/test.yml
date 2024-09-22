@@ -26,4 +26,4 @@ jobs:
       # - name: Run Pytest
       #   run: python -m pytest
       - name: Run Pytest
-        run: make test
+        run: python -m pytest --verbose
