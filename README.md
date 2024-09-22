@@ -2,6 +2,9 @@
 
 This project demonstrates a robust setup for a Python data science project using continuous integration with GitHub Actions to ensure code quality and functionality.
 
+## Video
+https://youtu.be/yut7buxB6YY
+
 ## Project Structure
 
 - `analysis.ipynb`: Jupyter notebook containing cells that perform descriptive statistics. This can use either Pandas depending on the project specifics.
