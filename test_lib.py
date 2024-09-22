@@ -4,6 +4,8 @@ import pandas as pd
 from pandas.testing import assert_frame_equal
 from unittest.mock import patch
 import os
+import matplotlib.pyplot as plt
+
 
 # Sample data for testing
 sample_data = pd.DataFrame({
@@ -37,11 +39,15 @@ def test_generate_summary(mock_data):
     
 # Test for visualize_data function
 @patch('matplotlib.pyplot.savefig')
-def test_visualize_data(mock_savefig, mock_data):
-    """
-    Test whether visualize_data saves a plot to a file.
-    """
+def test_visualize_data(mock_savefig, tmp_path):
+    # 准备数据
+    mock_data = pd.DataFrame({
+        'Year': [2020, 2021, 2022, 2023],
+        'Incidents': [5, 10, 15, 20]
+    })
+    # 调用函数
     visualize_data(mock_data, filename=tmp_path / 'test_histogram.png')
+    # 检查是否正确调用了 mock_savefig
     mock_savefig.assert_called_once_with(tmp_path / 'test_histogram.png')
     
 
