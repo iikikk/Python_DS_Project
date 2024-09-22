@@ -20,12 +20,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check Python and pytest
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
         run: |
           which python
           python --version
           python -m pytest --version
       - name: Run tests
-        run: make test
+        run: 
+          make install
+          make test
 
   format_code:
     needs: install_dependencies
@@ -33,7 +38,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Format code
-        run: make format
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+        run: 
+          make install
+          make format
 
   lint_code:
     needs: install_dependencies
@@ -41,4 +51,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Lint code
-        run: make lint
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+        run:
+          make install 
+          make lint
