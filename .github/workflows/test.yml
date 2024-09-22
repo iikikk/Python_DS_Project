@@ -2,17 +2,9 @@ name: Run Tests
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      - '**.py'
-      - '**.ipynb'
+    branches: ["master"]
   pull_request:
-    branches:
-      - master
-    paths:
-      - '**.py'
-      - '**.ipynb'
+    branches: ["master"]
   workflow_dispatch:
 
 jobs:
