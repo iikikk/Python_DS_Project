@@ -1,9 +1,7 @@
-import pytest
 from script import generate_summary, visualize_data, read_data
 import pandas as pd
 from io import StringIO
 import matplotlib.pyplot as plt
-import seaborn as sns
 from unittest.mock import patch, MagicMock
 
 # Mock data

@@ -3,8 +3,6 @@ from lib import read_data, generate_summary, visualize_data
 import pandas as pd
 from pandas.testing import assert_frame_equal
 from unittest.mock import patch
-import os
-import matplotlib.pyplot as plt
 
 
 # Sample data for testing

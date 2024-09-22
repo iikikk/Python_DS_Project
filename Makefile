@@ -18,5 +18,8 @@ test-lib:
 format:
 	black .
 
+lint-fix:
+    ruff check --fix .
+	
 lint:
 	ruff check .
