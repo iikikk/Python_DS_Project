@@ -20,9 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check Python and pytest
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
         run: |
           which python
           python --version
@@ -38,9 +35,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Format code
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
         run: 
           make install
           make format
@@ -51,9 +45,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Lint code
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
         run:
           make install 
           make lint
