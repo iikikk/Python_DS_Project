@@ -3,13 +3,13 @@ name: Run Tests
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - '**.py'
       - '**.ipynb'
   pull_request:
     branches:
-      - main
+      - master
     paths:
       - '**.py'
       - '**.ipynb'
