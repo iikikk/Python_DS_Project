@@ -33,10 +33,7 @@ def test_generate_summary(capfd):  # capfd is a pytest fixture that captures std
 # Visualization testing can be tricky as it generally requires visual inspection
 # For automation, you might consider checking if the file is created or not
 def test_visualize_data(tmp_path, monkeypatch):
-    # 为测试准备数据
     test_data = pd.DataFrame({'Year': [2020, 2021, 2022], 'Incidents': [5, 10, 15]})
-    # 使用 monkeypatch 覆盖 plt.savefig 方法
     monkeypatch.setattr(plt, 'savefig', MagicMock())
     visualize_data(test_data, filename=tmp_path / 'test_incident_years_histogram.png')
-    plt.savefig.assert_called_once()  # 检查是否调用了 savefig
-    assert (tmp_path / 'test_incident_years_histogram.png').exists()  # 检查文件是否创建
+    plt.savefig.assert_called_once_with(tmp_path / 'test_incident_years_histogram.png')
