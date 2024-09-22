@@ -19,4 +19,4 @@ format:
 	black .
 
 lint:
-	ruff .
+	ruff check .
