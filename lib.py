@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def read_data(file_path, sheet_name='Sheet1'):
+
+def read_data(file_path, sheet_name="Sheet1"):
     """
     Reads data from an Excel file and returns a pandas DataFrame.
 
@@ -14,6 +15,7 @@ def read_data(file_path, sheet_name='Sheet1'):
     - DataFrame containing the data from the specified Excel sheet.
     """
     return pd.read_excel(file_path, sheet_name=sheet_name)
+
 
 def generate_summary(data):
     """
@@ -28,12 +30,13 @@ def generate_summary(data):
     summary_stats = {
         "head": data.head(),
         "dtypes": data.dtypes,
-        "describe": data.describe(include='all'),
-        "year_stats": data['Year'].agg(['mean', 'median', 'std'])
+        "describe": data.describe(include="all"),
+        "year_stats": data["Year"].agg(["mean", "median", "std"]),
     }
     return summary_stats
 
-def visualize_data(data, filename='incident_years_histogram.png'):
+
+def visualize_data(data, filename="incident_years_histogram.png"):
     """
     Generates and saves a histogram of the 'Year' column of the DataFrame.
 
@@ -45,10 +48,10 @@ def visualize_data(data, filename='incident_years_histogram.png'):
     - Saves a histogram plot to the specified filename.
     """
     plt.figure(figsize=(10, 6))
-    sns.histplot(data['Year'], kde=False, color='blue')
-    plt.title('Distribution of Incident Years')
-    plt.xlabel('Year')
-    plt.ylabel('Frequency')
+    sns.histplot(data["Year"], kde=False, color="blue")
+    plt.title("Distribution of Incident Years")
+    plt.xlabel("Year")
+    plt.ylabel("Frequency")
     plt.grid(True)
     plt.savefig(filename)
     plt.close()
